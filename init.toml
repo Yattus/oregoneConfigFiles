@@ -1,0 +1,169 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    # boostrap_before = "myspacevim#before"
+    colorscheme = "onedark"
+    background = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = false
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = 'arrow'
+    guifont = 'DejaVu Sans Mono for Powerline:h11'
+    github_username = 'yattus'
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_neomake = false
+    enable_tabline_filetype_icon = true
+    enable_statusline_display_mode = true
+    statusline_unicode_symbols = 0
+    # enable_ycm = true
+    windows_leader = ";"
+    filemanager = "nerdtree"
+    vimcompatible = true
+    disabled_plugins = ['unite', 'garbas/vim-snipmate','scrooloose/syntastic','martinlroth/vim-acpi-asl']
+
+    # C++ syntax checker
+
+# [[layers]]
+#   name = "lsp"
+#     filetypes = [
+#         "python"
+#         "javascript"
+#         "html"
+#       ]
+
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto-completNERDTreeion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "smart"
+name = "colorscheme"
+
+[[layers]]
+  name = "fzf"
+
+[[layers]]
+    name = "shell"
+    default_position = "top"
+    default_height = 30
+
+[[layers]]
+  name = "tools"
+
+# Activé la couche de Python
+[[layers]]
+  name = "lang#python"
+  format-on-save = 1
+
+# Couche for java
+[[layers]]
+    name = "lang#java"
+
+# Couche for html
+[[layers]]
+    name = "lang#html"
+
+# Couche for javascript
+[[layers]]
+    name = "lang#javascript"
+
+[[layers]]
+  name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+  [layer.clang_std]
+    c = "c11"
+    cpp = "c++1z"
+    objc = "c11"
+    objcpp = "c++1z"
+
+[[custom_plugins]]
+name = 'scrooloose/nerdtree' 
+marged = 0
+
+[[custom_plugins]]
+name = 'garbas/vim-snipmate'
+marged = 0
+
+[[custom_plugins]]
+name = 'tpope/vim-commentary'
+marged = 0
+
+[[custom_plugins]]
+name = 'mitsuhiko/vim-sparkup'
+marged = 0
+
+[[custom_plugins]]
+name = 'kshenoy/vim-signature'
+marged = 0
+
+[[custom_plugins]]
+name = 'tpope/vim-surround'
+marged = 0
+
+[[custom_plugins]]
+name = 'mbbill/undotree' 
+marged = 0
+
+[[custom_plugins]]
+name = 'majutsushi/tagbar' 
+marged = 0
+
+[[custom_plugins]]
+name = 'terryma/vim-multiple-cursors'
+marged = 0
+
+[[custom_plugins]]
+name = 'mattn/emmet-vim'
+marged = 0
+
+[[custom_plugins]]
+# Paint css colors with the real color
+name = 'lilydjwg/colorizer'
+marged = 0
+
+[[custom_plugins]]
+# Python and other languages code checker
+name = 'scrooloose/syntastic'
+marged = 0
+
+[[custom_plugins]]
+# Drag visual blocks arround
+name = 'fisadev/dragvisuals.vim'
+marged = 0
+
+[[custom_plugins]]
+# Automatically sort python imports
+name = 'fisadev/vim-isort'
+marged = 0
+
+[[custom_plugins]]
+# Python autocompletion, go to definition.
+name = 'davidhalter/jedi-vim'
+marged = 0
+
+[[custom_plugins]]
+name = 'klen/python-mode'
+marged = 0
+
+[[custom_plugins]]
+name = 'ryanoasis/powerline-extra-symbols'
+marged = 0
+
+[[custom_plugins]]
+name = 'ryanoasis/nerd-fonts'
+marged = 0
+
