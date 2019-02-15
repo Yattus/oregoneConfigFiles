@@ -73,7 +73,7 @@ set shiftwidth=4                            " shift lines by 4 spaces
 set smartcase
 set ignorecase    " case insensitive searching (unless specified)
 set smarttab                                " set tabs for a shifttabs logic
-set expandtab                               " expand tabs into spaces
+" set expandtab                               " expand tabs into spaces
 set autoindent                              " indent when moving to the next line while writing code
 
 set colorcolumn=80
@@ -138,6 +138,27 @@ set guioptions-=R
 set guioptions-=m
 set guioptions-=T
 
+" ========= for Git NERDTree ========= 
+set shell=sh
+
+""" vimscript
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+" let g:NERDTreeShowIgnoredStatus = 1
+
+" ========= ========= =========
+
 nmap <leader>rh :res -10<CR>
 nmap <leader>hr :res +10<CR>
 nmap <leader>rv  :vertical res -10<CR>
@@ -150,7 +171,7 @@ nmap <leader>sh :split<CR>
 " nnoremap L J
 
 " jump up and down
-nmap <leader>K <pageup>
+nmap <leader>F <pageup>
 nmap <leader>J <pagedown>
 
 "HTML Editing
