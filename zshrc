@@ -413,3 +413,7 @@ autoload -U compinit && compinit
 export FZF_DEFAULT_OPS="--extended --border"
 export FZF_DEFAULT_COMMAND="fzf --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
