@@ -90,6 +90,10 @@ name = "colorscheme"
     objc = "c11"
     objcpp = "c++1z"
 
+# git layer to use that
+[[layers]]
+  name = "git"
+
 [[custom_plugins]]
 name = 'scrooloose/nerdtree' 
 marged = 0
@@ -167,3 +171,6 @@ marged = 0
 name = 'ryanoasis/nerd-fonts'
 marged = 0
 
+[[custom_plugins]]
+name = 'tpope/vim-fugitive'
+marged = 0
