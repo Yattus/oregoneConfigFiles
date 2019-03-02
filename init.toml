@@ -99,6 +99,10 @@ name = 'scrooloose/nerdtree'
 marged = 0
 
 [[custom_plugins]]
+name = 'Xuyuanp/nerdtree-git-plugin' 
+marged = 0
+
+[[custom_plugins]]
 name = 'garbas/vim-snipmate'
 marged = 0
 

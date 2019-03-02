@@ -114,6 +114,7 @@ set clipboard=unnamed                       " use system clipboard
 
 set exrc                                    " enable usage of additional .vimrc files from working directory
 set secure                                  " prohibit .vimrc files to execute shell, create files, etc...
+set shell=sh								" for fixed git nerdtree issue
 
 " Auto resize Vim splits to active split
 set winwidth=104
@@ -384,14 +385,30 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeWinPos="right"
-map " :NERDTreeToggle<CR>
-let g:spacevim_filemanager = 'NerdTree'
-let g:spacevim_enable_vimfiler_welcome = 0
+" map " :NERDTreeToggle<CR>
+
+" for NerdTree git
+" let g:NERDTreeShowIgnoredStatus = 1 (a heavy feature may cost much moretime))
+" ```vimscript
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+ " ```
+
 
 " When reading a buffer (after 1s), and when writing (no delay).
 " call neomake#configure#automake('rw', 1000)
-set statusline=...%{battery#component()}...
-let g:battery#update_statusline = 1
+" set statusline=...%{battery#component()}...
+" let g:battery#update_statusline = 1
 
 " undotree config
 nnoremap <F5> :UndotreeToggle<cr>
